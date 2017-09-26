@@ -1643,7 +1643,7 @@ TNCMS.AdManager.init
             function poll_results_633c460a_9f0f_11e7_a1da_3ff54fbcbf79(bBackBtn){
                 $.ajax({
                     type: 'GET',
-                    url: '/athletes/area_men/area-boys-sept/poll_633c460a-9f0f-11e7-a1da-3ff54fbcbf79.html?action=poll:results',
+                    url: 'http://www.newspressnow.com/athletes/area_men/area-boys-sept/poll_633c460a-9f0f-11e7-a1da-3ff54fbcbf79.html?action=poll:results',
                     dataType: 'json',
                     success: function(result){
                         var data = [];
@@ -1651,7 +1651,7 @@ TNCMS.AdManager.init
                         $.each(result.results,function(i,item){
                             var iNumVotes = item.votes;
                             if( iNumVotes === 0 && item.text === $.cookie(poll_633c460a_9f0f_11e7_a1da_3ff54fbcbf79_cookie) ){
-                                iNumVotes = 1;
+                                iNumVotes = 200;
                             }
                             data.push([item.text, iNumVotes, item.color]);
                         });
