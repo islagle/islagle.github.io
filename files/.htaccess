@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "restricted area"
-AuthUserFile /files.htpasswd
+AuthUserFile UNIV.MISSOURIWESTERN.EDU\NET\Home\Users\I\islagle\public_html\files\.htpasswd
 require valid-user
