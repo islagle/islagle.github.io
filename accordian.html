@@ -894,27 +894,7 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 	</div>
 	<!-- JavaScript -->
-	<script type="text/javascript" src="/files/theme/plugins.js?1504302544"></script>
-	<script type="text/javascript" src="/files/theme/custom.js?1504302544"></script>
-	<script type="text/javascript" src="/files/theme/mobile.js?1504302544"></script>
-
-		<script type="text/javascript">
-
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-7870337-1']);
-	_gaq.push(['_setDomainName', 'none']);
-	_gaq.push(['_setAllowLinker', true]);
-
-	(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-
-	_W.Analytics = _W.Analytics || {'trackers': {}};
-	_W.Analytics.trackers.wGA = '_gaq';
-
-</script>
+		
 
 <script type="text/javascript" async=1>
 	;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
@@ -968,34 +948,6 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 		false
 	);
 </script>
-
-<!-- Quantcast Tag -->
-<script type="text/javascript">
-var _qevents = _qevents || [];
-
-(function() {
-var elem = document.createElement('script');
-elem.src = "https://secure.quantserve.com/quant.js";
-elem.async = true;
-elem.type = "text/javascript";
-var scpt = document.getElementsByTagName('script')[0];
-scpt.parentNode.insertBefore(elem, scpt);
-})();
-
-_qevents.push({
-qacct:"p-0dYLvhSGGqUWo",
-labels:"l0,u14677698.u14677698s334521368834697711"
-});
-</script>
-
-<noscript>
-<div style="display:none;">
-<img src="//pixel.quantserve.com/pixel/p-0dYLvhSGGqUWo.gif?labels=l0,u14677698.u14677698s334521368834697711" border="0" height="1" width="1" alt="Quantcast"/>
-</div>
-</noscript>
-<!-- End Quantcast tag -->
-
-
 <script>
 
 	(function(jQuery) {
@@ -1037,47 +989,5 @@ labels:"l0,u14677698.u14677698s334521368834697711"
 	})(window._W && _W.jQuery);
 
 </script>
-<div id="eu-cookie" class="notification" style="display: none;">
-	<span id="eu-cookie-content"></span>
-	<span id="eu-cookie-close">&#10005;</span>
-</div>
-
-<script type="text/javascript">
-	(function($) {
-		window.cookie_location = '';
-		// this cookie_content should already be pre-encoded from CookieSettingView.js
-		window.cookie_content = '' || _W.stl('templates.publish.virtual-includes.footerCode_1');
-		window.cookie_policy_key = '334521368834697711_cookie_policy';
-		window.cookie_content_hash = '';
-
-		if (!_W.getCookie(window.cookie_policy_key) || _W.getCookie(window.cookie_policy_key) !== window.cookie_content_hash){
-			if (window.cookie_location === 'top' || window.cookie_location === 'bottom'){
-				$('#eu-cookie-content').text(decodeURIComponent(window.cookie_content));
-				(window.cookie_location === 'top') ? animateFromTop() : animateFromBottom();
-				$('#eu-cookie').show();
-			}
-		}
-
-		$('#eu-cookie-close').click(function(){
-			_W.setCookie(window.cookie_policy_key, window.cookie_content_hash, 100000);
-			$('#eu-cookie').hide();
-		});
-
-		function animateFromTop(){
-			$('#eu-cookie').css({
-				'top': '0px',
-				'animation': 'reveal-top 1 2s'
-			});
-		}
-
-		function animateFromBottom(){
-			$('#eu-cookie').css({
-				'bottom': '0px',
-				'animation': 'reveal-bottom 1 2s'
-			});
-		}
-	})(window._W && _W.jQuery);
-</script>
-
-	</body>
+</body>
 </html>
