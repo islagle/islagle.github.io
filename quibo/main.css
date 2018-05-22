@@ -126,6 +126,8 @@ h1 span a {
 .btn.orange {
   background-color: #e67e22;
   display: inline-block;
+  margin-left: 24%;
+  margin-right: 24%;
 }
 
 .btn.orange:hover, .btn.orange:focus {
