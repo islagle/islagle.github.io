@@ -3,13 +3,40 @@
 <title> SQDBOI </title>
   <link rel="stylesheet" href="main.css">
   <link rel="icon" href="iantslagle.github.io/Favicon.jpg">
+<script>
+$(document).ready(function () {
+    $(".iframe").click(function () {
+        var file = $(this).data("url");
+        var size = $(this).data("size");
+        var $one = $('#one');
+        $one.prepend("<h5 class='button open'>Hide Frame</h5><div class='frame-contain'><iframe class='articleframe' height=0 src='" + file + "'></iframe></div>");
+        var $wrap = $one.find('.frame-contain:first');
+        $wrap.animate({
+            height: size
+        }, {
+            duration: 1000,
+            step: function (now) {
+                $(this).height(now);
+                $(this).nextAll('.frame-contain').offsetParent().top += now;
+                $(this).find('iframe').height(now);
+            },
+            complete: function () {
+                $(".open").click(function () {
+                    $(this).next('div').slideUp(1000);
+                    $(this).fadeOut('slow');
+                });
+            }
+        });
+    });
+});
+  </script>
 </head>
 <body>
 <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <!--  Content  -->
 <article>
   <h1>  Choose tossup or bonus: </h1>
-  <button class="btn orange" type="button"><span>Tossup</span></button>
+  <button class="btn orange iframe" type="button" data-url="https://c0acz308.caspio.com/dp/c8d06000e5499e49f8534186a61c"><span>Tossup</span></button>
   <button class="btn orange" type="button"><span>Bonus</span></button>
 </article>
   
