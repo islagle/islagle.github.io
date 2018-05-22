@@ -4,9 +4,9 @@
   <link rel="stylesheet" href="main.css">
   <link rel="icon" href="iantslagle.github.io/Favicon.jpg">
 <script>
-function resizeTossupIframe(Tossup) 
+function resizeTossupIframe() 
 {       
-    var iframe = window.parent.document.getElementById(iframeID);
+    var iframe = window.parent.document.getElementById("Tossup");
     iframe.style.height = '90%';            
 } 
   </script>
@@ -17,7 +17,7 @@ function resizeTossupIframe(Tossup)
 <article>
   <iframe id="Tossup" name="Tossup Lookup" title="Tossup Lookup" src="https://c0acz308.caspio.com/dp/c8d06000e5499e49f8534186a61c" height = "0px" width="50%">Sorry, but your browser does not support frames.</iframe>
   <h1>  Choose tossup or bonus: </h1>
-  <button class="btn orange" type="button" onclick= "resizeTossupIframe"><span>Tossup</span></button>
+  <button class="btn orange" type="button" onclick= "resizeTossupIframe()"><span>Tossup</span></button>
   <button class="btn orange" type="button"><span>Bonus</span></button>
 </article>
   
