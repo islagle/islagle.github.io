@@ -30,7 +30,6 @@ article {
   bottom: 0;
   border: 10px solid rgba(255, 255, 255, 0.5);
   margin: 10px;
-  display: flex;
   justify-content: center;
   align-items: center;
   span {
