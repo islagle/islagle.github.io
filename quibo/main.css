@@ -30,7 +30,7 @@ article {
   bottom: 0;
   border: 10px solid rgba(255, 255, 255, 0.5);
   margin: 10px;
-  float:left;
+  display: inline-block;
 }
 
 h1 {
@@ -96,7 +96,7 @@ h1 span a {
   top: 50%;
   left: 50%;
   
-  display: block;
+  display: inline-block;
   width: 0;
   padding-top: 0;
     
@@ -137,7 +137,7 @@ h1 span a {
 iframe, header, section, div {
     clear: left;
     position: relative;
-    display: block;
+    display: inline-block;
 }
 section, div {
     width: 100%;
@@ -145,5 +145,5 @@ section, div {
 }
 .open {
     clear: left;
-    display: block;
+    display: inline-block;
 }
