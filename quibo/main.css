@@ -62,7 +62,7 @@ h1 span a {
 .btn {
   position: relative;
 
-  display: block;
+  display: inline-block;
   margin: 30px auto;
   padding: 0;
 
