@@ -124,11 +124,13 @@ h1 span a {
 .btn.orange {
   background-color: #e67e22;
   display: inline-block;
+  margin-bottom: 90%;
 }
 
 .btn.orange:hover, .btn.orange:focus {
   background-color: #d35400;
   display: inline-block;
+  margin-bottom: 90%;
 }
 
 .btn.red {
@@ -143,6 +145,7 @@ iframe, header, section, div {
     clear: left;
     position: relative;
     display: inline-block;
+    margin-top: 10%;
 }
 section, div {
     width: 100%;
