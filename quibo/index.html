@@ -16,7 +16,7 @@ function resizeTossupIframe()
 function resizeBonusIframe() 
 {       
     var iframe = window.parent.document.getElementById("Bonus");
-    if(iframe.style.height = '0px'){
+    if(iframe.style.height == '0px'){
         iframe.style.height = '90%';
     } else {
         iframe.style.height = '0px';
@@ -28,8 +28,10 @@ function resizeBonusIframe()
 <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <!--  Content  -->
 <article>
+  <div>
   <button class="btn orange" type="button" onclick= "resizeTossupIframe()"><span>Tossup</span></button>
   <button class="btn orange" type="button" onclick= "resizeBonusIframe()"><span>Bonus</span></button>
+  </div>
 <!-- </article>
 <article> -->
   <iframe id="Tossup" name="Tossup Lookup" title="Tossup Lookup" frameborder="0" src="https://c0acz308.caspio.com/dp/c8d06000e5499e49f8534186a61c" height = "0px" width="45%">Sorry, but your browser does not support frames.</iframe>
