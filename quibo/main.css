@@ -30,6 +30,7 @@ article {
   bottom: 0;
   border: 10px solid rgba(255, 255, 255, 0.5);
   margin: 10px;
+  float:left;
 }
 
 h1 {
