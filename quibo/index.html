@@ -1,59 +1,81 @@
+<!--
+
+ _______  _______  ______   ______   _______ _________
+(  ____ \(  ___  )(  __  \ (  ___ \ (  ___  )\__   __/
+| (    \/| (   ) || (  \  )| (   ) )| (   ) |   ) (   
+| (_____ | |   | || |   ) || (__/ / | |   | |   | |   
+(_____  )| |   | || |   | ||  __ (  | |   | |   | |   
+      ) || | /\| || |   ) || (  \ \ | |   | |   | |   
+/\____) || (_\ \ || (__/  )| )___) )| (___) |___) (___
+\_______)(____\/_)(______/ |/ \___/ (_______)\_______/
+                                                      
+Savannah  Quibo    Data     base       Of      Ian (Slagle)
+
+Welcome to the source code! Thanks for peeking under the hood.
+Most of the database is housed at Caspio, as you can see by the urls of the iframes
+There is a lot of nifty design work here, but you'll need to check out the CSS as well for the full picture
+-->
 <html>
 <head>
-<title> SQDBOI </title>
-  <link rel="stylesheet" href="main.css">
-  <link rel="icon" href="iantslagle.github.io/Favicon.jpg">
+<title> SQDBOI </title> <!-- Less-than-brilliant acronym as title -->
+  <link rel="stylesheet" href="main.css"> <!-- Cool design stuff here! Check it out -->
+  <link rel="icon" href="iantslagle.github.io/Favicon.jpg"> <!-- Favicon logo found at iantslagle.me/quibo/Favicon.jpg -->
 <script>
-function resizeTossupIframe() 
+function resizeTossupIframe() //so that the frame isn't always there
 {       
-    var iframeTossup = window.parent.document.getElementById("Tossup");
-    var iframeBonus = window.parent.document.getElementById("Bonus");
-    if(iframeTossup.style.height == '0px'){
-        iframeTossup.style.height = '82%';
-        if(iframeBonus.style.height == '0px'){
-          iframeTossup.style.width = '95%';
-        } else {
-          iframeBonus.style.width = '47.5%';
-          iframeTossup.style.width = '47.5%';
-        }
+    var iframeTossup = window.parent.document.getElementById("Tossup"); //store the element with id Tossup as iframe
+    if(iframeTossup.style.height == '0px'){ //if not open
+        iframeTossup.style.height = '82%'; //fill rest of page (semi-responsive design)
     } else {
-        iframeTossup.style.height = '0px';
+        iframeTossup.style.height = '0px'; //"close" iframe
     }
 } 
-function resizeBonusIframe() 
+function resizeBonusIframe() //repeat same process for bonus
 {       
-    var iframe = window.parent.document.getElementById("Bonus");
-    if(iframe.style.height == '0px'){
-        iframe.style.height = '82%';
-        if(iframeBonus.style.height == '0px'){
-          iframeBonus.style.width = '95%';
-        } else {
-          iframeBonus.style.width = '47.5%';
-          iframeTossup.style.width = '47.5%';
-        }
+    var iframe = window.parent.document.getElementById("Bonus"); //create variable for element of id Bonus
+    if(iframe.style.height == '0px'){ //if not open
+        iframe.style.height = '82%'; //"open" iframe
     } else {
-        iframe.style.height = '0px';
+        iframe.style.height = '0px'; //"close" iframe"
     }
 } 
   </script>
 </head>
 <body>
+<!-- Don't need this yet, but could come in handy. You never know when you need a good font.
 <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-<!--  Content  -->
+-->
+<!--  Content starts here -->
 <article>
-  <span>
-  <button class="btn orange" type="button" onclick= "resizeTossupIframe()"><span>Tossup</span></button>
-  <button class="btn orange" type="button" onclick= "resizeBonusIframe()"><span>Bonus</span></button>
+  <span> <!-- spans are used here to seperate lines -->
+    <button class="btn orange" type="button" onclick= "resizeTossupIframe()"><span><b>Tossup</b></span></button> <!-- Fancy material design buttons (see main.css) that call the script in the head -->
+    <button class="btn orange" type="button" onclick= "resizeBonusIframe()"><span><b>Bonus</b></span></button>
   </span>
-  <span>
+  <span> <!-- These iframes connect to DataPages of the database at Caspio (also contain id for scripts and no border -->
   <iframe id="Tossup" name="Tossup Lookup" title="Tossup Lookup" frameborder="0" src="https://c0acz308.caspio.com/dp/c8d06000e5499e49f8534186a61c" height = "0px">Sorry, but your browser does not support frames.</iframe>
   <iframe id="Bonus" name="Bonus Lookup" title="Bonus Lookup" frameborder="0" src="https://c0acz308.caspio.com/dp/c8d06000342bd787b6c94cfa8438" height = "0px">Sorry, but your browser does not support frames.</iframe>
   </span>
 </article>
   
-<!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->
+<!--  Video is muted & autoplays and is placed after major DOM elements for performance-->
 <video autoplay loop id="video-background" muted plays-inline>
   <source src="PlexusMotionBackground.mp4" type="video/mp4">
 </video>
 </body>
 </html>
+<!--
+I have eaten
+the plums
+that were in
+the icebox
+
+and which
+you were probably
+saving
+for breakfast
+
+Forgive me
+they were delicious
+so sweet
+and so cold
+-->
