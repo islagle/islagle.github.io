@@ -35,8 +35,7 @@ article {
   span {
     padding: 1px 8px;
     display: table;
-    justify-content: center;
-    align-items: center;
+    align: center;
   }
 }
 
