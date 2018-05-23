@@ -21,6 +21,12 @@ There is a lot of nifty design work here, but you'll need to check out the CSS a
   <link rel="stylesheet" href="main.css"> <!-- Cool design stuff here! Check it out -->
   <link rel="icon" href="iantslagle.github.io/Favicon.jpg"> <!-- Favicon logo found at iantslagle.me/quibo/Favicon.jpg -->
 <script>
+function zeroIframes(){
+  var iframeTossup = window.parent.document.getElementById("Tossup"); //store the element with id Tossup as iframe
+  var iframeBonus = window.parent.document.getElementById("Bonus"); //store the element with id Bonus as iframe
+  iframeTossup.style.height = '0px';
+  iframeBonus.style.height = '0px';
+}
 function resizeTossupIframe() //so that the frame isn't always there
 {       
     var iframeTossup = window.parent.document.getElementById("Tossup"); //store the element with id Tossup as iframe
@@ -63,7 +69,7 @@ function resizeBonusIframe() //repeat same process for bonus
 } 
   </script>
 </head>
-<body>
+<body onload="zeroIframes()">
 <!-- Don't need this yet, but could come in handy. You never know when you need a good font.
 <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 -->
