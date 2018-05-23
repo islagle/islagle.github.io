@@ -24,19 +24,41 @@ There is a lot of nifty design work here, but you'll need to check out the CSS a
 function resizeTossupIframe() //so that the frame isn't always there
 {       
     var iframeTossup = window.parent.document.getElementById("Tossup"); //store the element with id Tossup as iframe
+    var iframeBonus = window.parent.document.getElementById("Bonus"); //store the element with id Bonus as iframe
     if(iframeTossup.style.height == '0px'){ //if not open
         iframeTossup.style.height = '82%'; //fill rest of page (semi-responsive design)
+        if(iframeBonus.style.height == '0px'){
+           iframeBonus.style.width = '0px';
+           iframeTossup.style.width = '99%';
+        } else {
+           iframeBonus.style.width = '49.5%';
+           iframeTossup.style.width = '49.5%';
+        }
     } else {
         iframeTossup.style.height = '0px'; //"close" iframe
+        if(iframeBonus.style.height != '0px'){
+           iframeBonus.style.width = '99%';
+        }
     }
 } 
 function resizeBonusIframe() //repeat same process for bonus
 {       
-    var iframe = window.parent.document.getElementById("Bonus"); //create variable for element of id Bonus
-    if(iframe.style.height == '0px'){ //if not open
-        iframe.style.height = '82%'; //"open" iframe
+    var iframeTossup = window.parent.document.getElementById("Tossup"); //store the element with id Tossup as iframe
+    var iframeBonus = window.parent.document.getElementById("Bonus"); //create variable for element of id Bonus
+    if(iframeBonus.style.height == '0px'){ //if not open
+        iframeBonus.style.height = '82%'; //"open" iframe
+        if(iframeTossup.style.height == '0px'){
+           iframeTossup.style.width = '0px';
+           iframeBonus.style.width = '99%';
+        } else {
+           iframeBonus.style.width = '49.5%';
+           iframeTossup.style.width = '49.5%';
+        }
     } else {
-        iframe.style.height = '0px'; //"close" iframe"
+        iframeBonus.style.height = '0px'; //"close" iframe"
+        if(iframeTossup.style.height != '0px'){
+           iframeTossup.style.width = '99%';
+        }
     }
 } 
   </script>
