@@ -6,11 +6,18 @@
 <script>
 function resizeTossupIframe() 
 {       
-    var iframe = window.parent.document.getElementById("Tossup");
-    if(iframe.style.height == '0px'){
-        iframe.style.height = '82%';
+    var iframeTossup = window.parent.document.getElementById("Tossup");
+    var iframeBonus = window.parent.document.getElementById("Bonus");
+    if(iframeTossup.style.height == '0px'){
+        iframeTossup.style.height = '82%';
+        if(iframeBonus.style.height == '0px'){
+          iframeTossup.style.width = '95%';
+        } else {
+          iframeBonus.style.width = '47.5%';
+          iframeTossup.style.width = '47.5%';
+        }
     } else {
-        iframe.style.height = '0px';
+        iframeTossup.style.height = '0px';
     }
 } 
 function resizeBonusIframe() 
@@ -18,6 +25,12 @@ function resizeBonusIframe()
     var iframe = window.parent.document.getElementById("Bonus");
     if(iframe.style.height == '0px'){
         iframe.style.height = '82%';
+        if(iframeBonus.style.height == '0px'){
+          iframeBonus.style.width = '95%';
+        } else {
+          iframeBonus.style.width = '47.5%';
+          iframeTossup.style.width = '47.5%';
+        }
     } else {
         iframe.style.height = '0px';
     }
@@ -33,8 +46,8 @@ function resizeBonusIframe()
   <button class="btn orange" type="button" onclick= "resizeBonusIframe()"><span>Bonus</span></button>
   </span>
   <span>
-  <iframe id="Tossup" name="Tossup Lookup" title="Tossup Lookup" frameborder="0" src="https://c0acz308.caspio.com/dp/c8d06000e5499e49f8534186a61c" height = "0px" width="45%">Sorry, but your browser does not support frames.</iframe>
-  <iframe id="Bonus" name="Bonus Lookup" title="Bonus Lookup" frameborder="0" src="https://c0acz308.caspio.com/dp/c8d06000342bd787b6c94cfa8438" height = "0px" width="45%">Sorry, but your browser does not support frames.</iframe>
+  <iframe id="Tossup" name="Tossup Lookup" title="Tossup Lookup" frameborder="0" src="https://c0acz308.caspio.com/dp/c8d06000e5499e49f8534186a61c" height = "0px">Sorry, but your browser does not support frames.</iframe>
+  <iframe id="Bonus" name="Bonus Lookup" title="Bonus Lookup" frameborder="0" src="https://c0acz308.caspio.com/dp/c8d06000342bd787b6c94cfa8438" height = "0px">Sorry, but your browser does not support frames.</iframe>
   </span>
 </article>
   
