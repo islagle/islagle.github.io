@@ -39,6 +39,7 @@ article {
   }
 }
 
+/* If I want to add text at some point
 h1 {
   position: absolute;
   top: 60%;
@@ -61,7 +62,9 @@ h1 span {
 h1 span a {
   color: #fff;
 }
+*/
 
+/* Cool material design buttons I found */
 .btn {
   position: relative;
 
@@ -136,24 +139,22 @@ h1 span a {
   display: inline-block;
 }
 
-.btn.red {
-  background-color: #e74c3c;
-}
-
-.btn.red:hover, .btn.red:focus {
-  background-color: #c0392b;
-}
-
-iframe, header, section, div {
+/*makes sure the iframes stack properly */
+iframe{
     clear: left;
     position: relative;
     display: inline-block;
 }
-section, div {
-    width: 100%;
-    max-height: 100%;
-}
-.open {
-    clear: left;
-    display: inline-block;
-}
+/*
+so much depends
+upon
+
+a red wheel
+barrow
+
+glazed with rain
+water
+
+beside the white
+chickens.
+*/
